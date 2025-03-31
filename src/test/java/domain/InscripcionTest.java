@@ -11,11 +11,11 @@ class InscripcionTest {
     @Test
     public void InscripcionTest() {
 
-        Materia am2 = new Materia();
-        Materia am = new Materia();
-        Materia aga = new Materia();
+        Materia am2 = new Materia("AM2");
+        Materia am = new Materia("AM");
+        Materia aga = new Materia("AGA");
 
-        am.agregarCorrelativas(am,aga);
+        am2.agregarCorrelativas(am,aga);
 
         Alumno juan = new Alumno("Juan");
         Inscripcion inscripcionJuanAM2 = new Inscripcion(juan,am2);
@@ -26,7 +26,7 @@ class InscripcionTest {
 
         juan.agregarMateriasAprobadas(am);
 
-        Assertions.assertEquals(inscripcionJuanAM2,true);
+        Assertions.assertEquals(inscripcionJuanAM2.aprobada(),true);
 
 
 

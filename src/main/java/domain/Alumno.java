@@ -38,6 +38,6 @@ public class Alumno {
     }
 
     public boolean puedeCursar(Materia materia) {
-        return materia.getCorrelativas().containsAll(aprobadas);
+        return materia.getCorrelativas().stream().allMatch(correlativa -> aprobadas.contains(correlativa));
     }
 }

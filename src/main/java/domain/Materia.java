@@ -8,7 +8,8 @@ public class Materia {
     private String nombre;
     private List<Materia> correlativas;
 
-    public Materia() {
+    public Materia(String nombre) {
+        this.nombre = nombre;
         correlativas = new ArrayList<Materia>();
     }
 
